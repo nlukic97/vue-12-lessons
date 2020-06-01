@@ -12,21 +12,6 @@
 </style>
 <body>
     <div id="root">
-        <input type="text" id="input" v-model="message"> <!-- for form inputs alone, use v-model -->
-
-        <p>the Value of the input is {{message}}</p>
-
-
-        <ul> <!-- episode 3, two options-->
-            <li v-for="name in names">{{name}}</li>
-            <li v-for="name in names" v-text="name"></li>
-        </ul>
-
-        <input type="text" v-model="newName">
-        <!-- <input type="text" v-model="newName" v-on:keyUp="addName"> -->
-        <button @click="addName">Add name</button>
-
-
         <!-- lesson 5 -->
         <button v-bind:title="title">Hover over me</button>
         <!-- <button :title="title">Hover over me</button> -->
@@ -37,13 +22,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="script.js"></script>
     <script>
-        // we can now type in 'app' instead of $vm0
         var app = new Vue ({
             el: '#root',
             data:  {
-                newName:'',
-                message: 'Hello world',
-                names: ['Joe','mary','jane','jack'],
                 title: 'Now the title is set to javasript',
                 isloading: false 
             },
@@ -52,10 +33,6 @@
             //     alert ('ready')
             // }
             methods: {
-                addName: function(){
-                    this.names.push(this.newName);
-                    this.newName = '';
-                },
                 toggleClass: function(){
                     this.isloading = true;
                 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+</head>
+<style>
+    body {
+        padding-top: 40px;
+    }
+</style>
+<body>
+    <div id="root" class="container">
+
+       <modal v-show="showModal" @close="showModal = false">
+           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur fugit voluptatem quaerat temporibus atque eaque veniam. Iste autem ratione officia error fuga ea exercitationem explicabo incidunt? Assumenda, consequuntur perspiciatis! Unde.</p> <!-- inserted with slot in components, not to be hard coded-->
+       </modal>  <!-- or v - if -->
+
+       <button @click="showModal = true" >Show modal</button>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

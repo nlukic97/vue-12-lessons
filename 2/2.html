@@ -1,0 +1,33 @@
+<!-- Same as previous one -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .is-loading {
+        background-color:red;
+    }
+</style>
+<body>
+    <div id="root">
+        <input type="text" id="input" v-model="message"> <!-- for form inputs alone, use v-model -->
+
+        <p>the Value of the input is {{message}}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        new Vue ({
+            el: '#root',
+            data:  {
+                message: 'Hello world'
+            }
+        })
+    </script>
+</body>
+</html>
